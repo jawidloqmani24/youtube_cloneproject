@@ -21,8 +21,8 @@
         </div>
         <div class="header-search">
             <form action="">
-                <input type="text" id="search-input" placeholder="Search">
-                <button>
+                <input type="text" id="searchInput" placeholder="Search">
+                <button type="button" onclick="searchVideos()">
                     <i class="material-icons search_in">search</i>
                 </button>
                    <div class="search-mic">
@@ -92,7 +92,13 @@
         </div>
         <!-- End sidebar -->
          <div class="videos">
+
+            
             <!-- Start recommends -->
+
+             <button class="scroll-btn left" onclick="scrollCategories(-1)">&lt;</button>
+              <button class="scroll-btn right" onclick="scrollCategories(1)">&gt;</button>
+
             <div class="recommend">
                 <span>All</span>
                 <span>coders</span>
@@ -101,6 +107,8 @@
                 <span>Podcast</span>
                 <span>Web</span>
                 <span>Source code</span>
+                <span>Travel</span>
+                <span>Mountains</span>
 
 
             </div>
@@ -117,12 +125,12 @@
     ...
                                    </div>
              
-                
                       </div>
                    </div>
                 </div>
              </div>
                         
  <script src="./script.js"></script>
+ 
 </body>
 </html>

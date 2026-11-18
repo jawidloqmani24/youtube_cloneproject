@@ -18,9 +18,9 @@ body {
     color: rgb(40, 37, 37);
 }
 
-/* =========================
-   Start Header
-========================= */
+
+   /* Start Header */
+
 
 .header {
     display: flex;
@@ -138,18 +138,18 @@ body {
 
 }
 
-/* =========================
+/* 
    Start Mainbody
-========================= */
+ */
 
 .mainbody {
     min-height: calc(100vh - 70px);
     display: flex;
 }
 
-/* =========================
+/* 
    Start Sidebar
-========================= */
+*/
 
 .sidebar {
     height: calc(100vh - 70px);
@@ -165,6 +165,7 @@ body {
     flex-direction: column;
     margin-top: 15px;
     margin-bottom: 15px;
+
 }
 
 .sidebar-category {
@@ -212,19 +213,20 @@ hr {
 
 }
 
-/* =========================
+/* 
    Start Videos Section
-========================= */
+ */
 
 .videos {
     flex: 1;
     min-width: 0;
     background-color: #f9f9f9;
+    
 }
 
-/* =========================
-   Start Recommend
-========================= */
+
+ 
+  /* Start Recommend */
 
 .recommend {
     display: flex;
@@ -233,8 +235,15 @@ hr {
     overflow-x: auto;
     white-space: nowrap;
     padding: 10px;
+    
 }
 
+.recommend {
+    scrollbar-width: none;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
 .recommend span {
     flex-shrink: 0;
     background-color: #f9f9f9;
@@ -248,9 +257,9 @@ hr {
     background-color: #e5e5e5;
 }
 
-/* =========================
+/*
    Start Videos Container
-========================= */
+ */
 
 .videos-container {
     margin-top: 30px;
@@ -260,9 +269,9 @@ hr {
     gap: 25px 15px;
 }
 
-/* =========================
+/* 
    Start Video
-========================= */
+ */
 
 .video {
     width: 100%;
@@ -319,9 +328,9 @@ hr {
     font-size: 13px;
 }
 
-/* =========================
+/* 
    Tablet Responsive
-========================= */
+*/
 
 @media (max-width: 900px) {
 
@@ -332,9 +341,9 @@ hr {
 
 }
 
-/* =========================
+/* 
    Mobile Responsive
-========================= */
+ */
 
 @media (max-width: 600px) {
 
@@ -384,3 +393,47 @@ hr {
     display: block;
 }
 
+/* Start  ( <   >  ) styles*/
+.scroll-btn{
+    cursor : pointer;
+    border: none;
+    background: white;
+    font-size: 22px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.videos{
+    position : relative;
+}
+.scroll-btn{
+    position : absolute;
+    top : 10px;
+    z-index: 10;
+}
+
+.scroll-btn.left{
+    left : 0;
+}
+
+.scroll-btn.right{
+    right: 0;
+}
+
+.recommend{
+    display: flex;
+    gap : 12px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.recommend::-webkit-scrollbar {
+    display: none;
+}
+
+.recommend span {
+    flex-shrink: 0;
+}
